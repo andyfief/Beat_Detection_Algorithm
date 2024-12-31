@@ -24,7 +24,7 @@ If a local maxima is found, we then check if the distance between the last detec
 The distance parameter is important because of the large number of oscillations in any audio waveform, mentioned previously. Even after chunking our data, there are still smaller oscillations present that we want to skip. Setting a minimum distance between beats ensures that
 we only detect relevant peaks.
 
-Chunk size and minimum distance should be adjusted to fit the needs of your audio file. Inputs with lower BPM can benefit from a higher minimum distance. Inputs with frequently changing amplitudes will benefit from a lower chunk size.
+Chunk size and minimum distance should be adjusted to fit the needs of your audio file. Inputs with lower BPM can benefit from a higher minimum distance. Inputs with quicker beats will benefit from a lower chunk size.
   - Minimum distance: Think about how often beats likely happen.
   - Chunk size: Think about how long a single beat lasts.
 
