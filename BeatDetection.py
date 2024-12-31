@@ -62,13 +62,11 @@ def get_beattimes(frames, samplerate):
 def chunk_data(data, chunk_size, threshold):
     data = clip_threshold(data, threshold)
 
-    abs_data = np.abs(data)
-
-    num_chunks = len(abs_data) // chunk_size
+    num_chunks = len(data) // chunk_size #d
     chunked_values = []
 
     for i in range(num_chunks):
-        chunk = abs_data[i * chunk_size:(i + 1) * chunk_size]
+        chunk = data[i * chunk_size:(i + 1) * chunk_size] #d
         chunk_sum = np.sum(chunk) / chunk_size
         chunked_values.append(chunk_sum)
 
@@ -78,8 +76,8 @@ if __name__ == '__main__':
     file = "../spleet/output/where-the-wild-things-are/drums.wav"
     data, samplerate = load_song(file)
 
-    start_time = 0
-    end_time = 299
+    start_time = 40
+    end_time = 60
     start_sample, end_sample = get_sample(start_time, end_time, samplerate)
 
     data = remove_negatives(data)
