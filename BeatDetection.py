@@ -59,7 +59,7 @@ def get_beattimes(frames, samplerate):
     beat_times = librosa.frames_to_time(frames, sr=samplerate)
     return beat_times
 
-def chunk_data(data, chunk_size, threshold)
+def chunk_data(data, chunk_size, threshold):
     data = clip_threshold(data, threshold)
 
     abs_data = np.abs(data)
