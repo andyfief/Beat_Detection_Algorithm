@@ -1,6 +1,14 @@
 # Beat Detection Algorithm
 This project provides an algorithm to detect beats in an audio file. It uses Librosa for audio processing, NumPy for numerical operations, and Matplotlib for visualizations.
 
+# This is my current personal project!
+Bear with me as code is unorganized and lacks comments.
+
+I'm currently working on implementing the algorithm in C#, and I will soon begin developing a windows forms application to make chunking and selecting distance values easier.
+I also aim to add songs to a SQL database that I can compare imported audio arrays against to give recommended settings.
+
+Stay tuned!
+
 ## How it works
 Firstly, Librosa loads the audio file and returns a NumPy array of floating point values between -1 and 1 that represent the amplitude of the audio signal at every sample. Variable "samplerate" determines how many samples Librosa returns for each second of the input audio.
 Using the default sample rate of 22050, a 3 minute song will return an array of length 3969000.
